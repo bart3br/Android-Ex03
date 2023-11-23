@@ -8,4 +8,5 @@
     <string name="rb_option2">Option 2</string>
     <string name="tv_main_activity">Main Activity</string>
     <string name="hint_data_results">here data/results</string>
+    <string name="btn_send_value">Send value</string>
 </resources>

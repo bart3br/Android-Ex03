@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 
 private const val ARG_PARAM1 = "param1"
@@ -91,6 +92,12 @@ class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
         if (savedInstanceState != null) {
             frag1 = childFragmentManager.findFragmentByTag(this.TAG_F1) as Fragment1
             frag2 = childFragmentManager.findFragmentByTag(this.TAG_F2) as Fragment2
+        }
+
+        childFragmentManager.setFragmentResultListener("msgfromchild", viewLifecycleOwner) {
+            key, bundle ->
+            val result = bundle.getString("msg1")
+            (requireActivity().findViewById(R.id.tv_results) as TextView).text = result
         }
     }
 }
