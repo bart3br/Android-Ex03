@@ -7,4 +7,5 @@
     <string name="rb_option1">Option 1</string>
     <string name="rb_option2">Option 2</string>
     <string name="tv_main_activity">Main Activity</string>
+    <string name="hint_data_results">here data/results</string>
 </resources>
