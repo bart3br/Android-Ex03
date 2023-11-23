@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Exercise03</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_fragment1">Fragment 1</string>
+    <string name="tv_fragment2">Fragment 2</string>
+    <string name="rb_option1">Option 1</string>
+    <string name="rb_option2">Option 2</string>
+    <string name="tv_main_activity">Main Activity</string>
 </resources>
