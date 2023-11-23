@@ -5,19 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
+import androidx.fragment.app.FragmentTransaction
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentCenter.newInstance] factory method to
- * create an instance of this fragment.
- */
-class FragmentCenter : Fragment() {
-    // TODO: Rename and change types of parameters
+class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
+    lateinit var frag1: Fragment1
+    lateinit var frag2: Fragment2
+    lateinit var myTrans: FragmentTransaction
+
+
     private var param1: String? = null
     private var param2: String? = null
 
@@ -27,6 +26,10 @@ class FragmentCenter : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        frag1 = Fragment1.newInstance(ARG_PARAM1, ARG_PARAM2)
+        frag2 = Fragment2.newInstance(ARG_PARAM1, ARG_PARAM2)
+        myTrans = childFragmentManager.beginTransaction()
     }
 
     override fun onCreateView(
@@ -37,16 +40,9 @@ class FragmentCenter : Fragment() {
         return inflater.inflate(R.layout.fragment_center, container, false)
     }
 
+
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentCenter.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             FragmentCenter().apply {
@@ -55,5 +51,28 @@ class FragmentCenter : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
+        val myTrans = childFragmentManager.beginTransaction()
+        when(checkedId) {
+            R.id.rb_1 -> {
+                myTrans.replace(R.id.dfcontainer, frag1)
+                //myTrans.detach(frag2)
+                //myTrans.attach(frag1)
+            }
+            R.id.rb_2 -> {
+                myTrans.replace(R.id.dfcontainer, frag2)
+                //myTrans.detach(frag1)
+                //myTrans.attach(frag2)
+            }
+        }
+        myTrans.commit()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (requireActivity().findViewById(R.id.radio_group) as RadioGroup)
+            .setOnCheckedChangeListener(this)
     }
 }
