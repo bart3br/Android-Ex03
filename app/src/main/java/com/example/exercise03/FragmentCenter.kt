@@ -16,6 +16,9 @@ class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
     lateinit var frag2: Fragment2
     lateinit var myTrans: FragmentTransaction
 
+    private val TAG_F1 = "Fragment1"
+    private val TAG_F2 = "Fragment2"
+
 
     private var param1: String? = null
     private var param2: String? = null
@@ -27,9 +30,19 @@ class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        frag1 = Fragment1.newInstance(ARG_PARAM1, ARG_PARAM2)
-        frag2 = Fragment2.newInstance(ARG_PARAM1, ARG_PARAM2)
-        myTrans = childFragmentManager.beginTransaction()
+        if (savedInstanceState == null) {
+            frag1 = Fragment1.newInstance(ARG_PARAM1, ARG_PARAM2)
+            frag2 = Fragment2.newInstance(ARG_PARAM1, ARG_PARAM2)
+            myTrans = childFragmentManager.beginTransaction()
+            myTrans!!.add(R.id.dfcontainer, frag1, this.TAG_F1)
+            myTrans!!.detach(frag1!!)
+            myTrans!!.add(R.id.dfcontainer, frag2, this.TAG_F2)
+            myTrans!!.detach(frag2!!)
+            myTrans!!.commit()
+        }
+        //frag1 = Fragment1.newInstance(ARG_PARAM1, ARG_PARAM2)
+        //frag2 = Fragment2.newInstance(ARG_PARAM1, ARG_PARAM2)
+        //myTrans = childFragmentManager.beginTransaction()
     }
 
     override fun onCreateView(
@@ -57,14 +70,14 @@ class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
         val myTrans = childFragmentManager.beginTransaction()
         when(checkedId) {
             R.id.rb_1 -> {
-                myTrans.replace(R.id.dfcontainer, frag1)
-                //myTrans.detach(frag2)
-                //myTrans.attach(frag1)
+                //myTrans.replace(R.id.dfcontainer, frag1)
+                myTrans.detach(frag2)
+                myTrans.attach(frag1)
             }
             R.id.rb_2 -> {
-                myTrans.replace(R.id.dfcontainer, frag2)
-                //myTrans.detach(frag1)
-                //myTrans.attach(frag2)
+                //myTrans.replace(R.id.dfcontainer, frag2)
+                myTrans.detach(frag1)
+                myTrans.attach(frag2)
             }
         }
         myTrans.commit()
@@ -74,5 +87,10 @@ class FragmentCenter : Fragment(), RadioGroup.OnCheckedChangeListener {
         super.onViewCreated(view, savedInstanceState)
         (requireActivity().findViewById(R.id.radio_group) as RadioGroup)
             .setOnCheckedChangeListener(this)
+
+        if (savedInstanceState != null) {
+            frag1 = childFragmentManager.findFragmentByTag(this.TAG_F1) as Fragment1
+            frag2 = childFragmentManager.findFragmentByTag(this.TAG_F2) as Fragment2
+        }
     }
 }
