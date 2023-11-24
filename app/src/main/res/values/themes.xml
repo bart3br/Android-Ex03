@@ -6,4 +6,91 @@
     </style>
 
     <style name="Theme.Exercise03" parent="Base.Theme.Exercise03" />
+
+    <style name="AppTheme1" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/theme1_light_primary</item>
+        <item name="colorOnPrimary">@color/theme1_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme1_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme1_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme1_light_secondary</item>
+        <item name="colorOnSecondary">@color/theme1_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme1_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme1_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/theme1_light_tertiary</item>
+        <item name="colorOnTertiary">@color/theme1_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/theme1_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/theme1_light_onTertiaryContainer</item>
+        <item name="colorError">@color/theme1_light_error</item>
+        <item name="colorErrorContainer">@color/theme1_light_errorContainer</item>
+        <item name="colorOnError">@color/theme1_light_onError</item>
+        <item name="colorOnErrorContainer">@color/theme1_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/theme1_light_background</item>
+        <item name="colorOnBackground">@color/theme1_light_onBackground</item>
+        <item name="colorSurface">@color/theme1_light_surface</item>
+        <item name="colorOnSurface">@color/theme1_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/theme1_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/theme1_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/theme1_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/theme1_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/theme1_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/theme1_light_inversePrimary</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/theme2_light_primary</item>
+        <item name="colorOnPrimary">@color/theme2_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme2_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme2_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme2_light_secondary</item>
+        <item name="colorOnSecondary">@color/theme2_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme2_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme2_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/theme2_light_tertiary</item>
+        <item name="colorOnTertiary">@color/theme2_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/theme2_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/theme2_light_onTertiaryContainer</item>
+        <item name="colorError">@color/theme2_light_error</item>
+        <item name="colorErrorContainer">@color/theme2_light_errorContainer</item>
+        <item name="colorOnError">@color/theme2_light_onError</item>
+        <item name="colorOnErrorContainer">@color/theme2_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/theme2_light_background</item>
+        <item name="colorOnBackground">@color/theme2_light_onBackground</item>
+        <item name="colorSurface">@color/theme2_light_surface</item>
+        <item name="colorOnSurface">@color/theme2_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/theme2_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/theme2_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/theme2_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/theme2_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/theme2_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/theme2_light_inversePrimary</item>
+    </style>
+
+    <style name="AppTheme3" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/theme3_light_primary</item>
+        <item name="colorOnPrimary">@color/theme3_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/theme3_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/theme3_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/theme3_light_secondary</item>
+        <item name="colorOnSecondary">@color/theme3_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/theme3_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/theme3_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/theme3_light_tertiary</item>
+        <item name="colorOnTertiary">@color/theme3_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/theme3_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/theme3_light_onTertiaryContainer</item>
+        <item name="colorError">@color/theme3_light_error</item>
+        <item name="colorErrorContainer">@color/theme3_light_errorContainer</item>
+        <item name="colorOnError">@color/theme3_light_onError</item>
+        <item name="colorOnErrorContainer">@color/theme3_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/theme3_light_background</item>
+        <item name="colorOnBackground">@color/theme3_light_onBackground</item>
+        <item name="colorSurface">@color/theme3_light_surface</item>
+        <item name="colorOnSurface">@color/theme3_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/theme3_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/theme3_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/theme3_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/theme3_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/theme3_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/theme3_light_inversePrimary</item>
+    </style>
 </resources>

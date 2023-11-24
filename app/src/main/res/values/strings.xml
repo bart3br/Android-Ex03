@@ -15,4 +15,16 @@
     <string name="menu_item_left">Left Fragment</string>
     <string name="menu_item_center">Center Fragment</string>
     <string name="menu_item_right">Right Fragment</string>
+    <string name="tv_preferred_color">Preferred color:</string>
+    <string name="tv_title">Personal data</string>
+    <string name="tv_color">Color</string>
+    <string name="tv_birth_date">Birth date</string>
+    <string name="date_hint">dd-mm-yyyy</string>
+    <string name="cam_color1">Color 1</string>
+    <string name="cam_color2">Color 2</string>
+    <string name="cam_color3">Color 3</string>
+    <string name="mi_title_1">Theme 1</string>
+    <string name="mi_title_2">Theme 2</string>
+    <string name="mi_title_3">Theme 3</string>
+    <string name="mi_title_4">Default</string>
 </resources>

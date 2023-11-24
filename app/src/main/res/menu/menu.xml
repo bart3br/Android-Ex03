@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mi_id_4"
+        android:title="@string/mi_title_4"
+        android:icon="@drawable/restore_icon"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/mi_id_1"
+        android:title="@string/mi_title_1"
+        />
+    <item
+        android:id="@+id/mi_id_2"
+        android:title="@string/mi_title_2"
+        />
+    <item
+        android:id="@+id/mi_id_3"
+        android:title="@string/mi_title_3"
+        />
+</menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cam_id_1"
+        android:title="@string/cam_color1"
+        android:icon="@drawable/color1_icon"
+        />
+    <item
+        android:id="@+id/cam_id_2"
+        android:title="@string/cam_color2"
+        android:icon="@drawable/color2_icon"
+        />
+    <item
+        android:id="@+id/cam_id_3"
+        android:title="@string/cam_color3"
+        android:icon="@drawable/color3_icon"
+        />
+
+</menu>
