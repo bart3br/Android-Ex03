@@ -3,6 +3,9 @@ package com.example.exercise03
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.exercise03.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -15,9 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fc_container2) as NavHostFragment
         val navController =navHostFragment.navController
-        val bottomNavMenu: BottomNavigationView = binding.bottomNavigationView
+        val bottomNavView: BottomNavigationView = binding.bottomNavigationView
 
-        bottomNavMenu.setOnItemSelectedListener {
+        bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.fragmentLeft -> {
                     navController.navigate(R.id.action_global_to_fragLeft)
@@ -34,5 +37,11 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+        /*val appBarConfig: AppBarConfiguration =
+            AppBarConfiguration(
+                setOf(R.id.fragmentLeft, R.id.fragmentCenter, R.id.fragmentRight))
+        setupActionBarWithNavController(navController, appBarConfig)
+        bottomNavView.setupWithNavController(navController)*/
     }
 }
