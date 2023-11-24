@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/fragmentLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/menu_item_left"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_left" />
+
+    <item
+        android:id="@+id/fragmentCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/menu_item_center"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_center" />
+
+    <item
+        android:id="@+id/fragmentRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/menu_item_right"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_right" />
+</menu>

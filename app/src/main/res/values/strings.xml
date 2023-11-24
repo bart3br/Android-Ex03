@@ -12,4 +12,7 @@
     <string name="tv_fragment_left">Left fragment</string>
     <string name="btn_go">Go</string>
     <string name="tv_fragment_right">Right fragment</string>
+    <string name="menu_item_left">Left Fragment</string>
+    <string name="menu_item_center">Center Fragment</string>
+    <string name="menu_item_right">Right Fragment</string>
 </resources>
