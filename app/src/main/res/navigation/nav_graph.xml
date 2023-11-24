@@ -21,7 +21,11 @@
         android:id="@+id/fragmentRight"
         android:name="com.example.exercise03.FragmentRight"
         android:label="fragment_right"
-        tools:layout="@layout/fragment_right" />
+        tools:layout="@layout/fragment_right">
+        <action
+            android:id="@+id/action_fragmentRight_to_fragmentEdit"
+            app:destination="@id/fragmentEdit" />
+    </fragment>
 
     <action
         android:id="@+id/action_global_to_fragLeft"
@@ -40,4 +44,13 @@
         app:destination="@+id/fragmentRight"
         app:launchSingleTop="true"
         app:popUpTo="@id/fragmentCenter" />
+    <fragment
+        android:id="@+id/fragmentEdit"
+        android:name="com.example.exercise03.FragmentEdit"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_fragmentEdit_to_fragmentRight"
+            app:destination="@id/fragmentRight" />
+    </fragment>
 </navigation>

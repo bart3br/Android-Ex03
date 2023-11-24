@@ -27,4 +27,8 @@
     <string name="mi_title_2">Theme 2</string>
     <string name="mi_title_3">Theme 3</string>
     <string name="mi_title_4">Default</string>
+    <string name="hint_edit_data">here data edit result</string>
+    <string name="btn_edit">Edit</string>
+    <string name="et_name_surname">Enter name and surname</string>
+    <string name="tv_fragment_edit">Fragment Edit</string>
 </resources>
