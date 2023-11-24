@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.navigation.fragment.NavHostFragment
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -38,5 +41,21 @@ class FragmentLeft : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.btn_edit_data).setOnClickListener{ _ ->
+            val navController = NavHostFragment.findNavController(this)
+            navController.navigate(R.id.action_fragmentLeft_to_fragmentEdit)
+        }
+
+        /*childFragmentManager.setFragmentResultListener("datafromchild", viewLifecycleOwner) {
+                key, bundle ->
+            val result = bundle.getString("msg3")
+            (requireActivity().findViewById(R.id.tv_results) as TextView).text = result
+
+        }*/
+        view.findViewById<TextView>(R.id.tv_results).text = arguments?.getString("msg3")
     }
 }

@@ -9,6 +9,9 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.exercise03.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -27,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val navController =navHostFragment.navController
         val bottomNavView: BottomNavigationView = binding.bottomNavigationView
 
-        bottomNavView.setOnItemSelectedListener {
+        /*bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.fragmentLeft -> {
                     navController.navigate(R.id.action_global_to_fragLeft)
@@ -43,13 +46,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
-        }
+        }*/
 
-        /*val appBarConfig: AppBarConfiguration =
+        val appBarConfig: AppBarConfiguration =
             AppBarConfiguration(
                 setOf(R.id.fragmentLeft, R.id.fragmentCenter, R.id.fragmentRight))
         setupActionBarWithNavController(navController, appBarConfig)
-        bottomNavView.setupWithNavController(navController)*/
+        bottomNavView.setupWithNavController(navController)
     }
 
     private fun setPrefs(themeNum: Int) {

@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.SeekBar
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
 
@@ -53,7 +52,7 @@ class FragmentEdit : Fragment() {
                 bundleOf("msg3" to ("Name and surname = $value"))
             )*/
             val navController = NavHostFragment.findNavController(this)
-            navController.navigate(R.id.action_fragmentEdit_to_fragmentRight,
+            navController.navigate(R.id.action_fragmentEdit_to_fragmentLeft,
                 bundleOf("msg3" to value.toString()))
         }
     }

@@ -31,4 +31,6 @@
     <string name="btn_edit">Edit</string>
     <string name="et_name_surname">Enter name and surname</string>
     <string name="tv_fragment_edit">Fragment Edit</string>
+    <string name="et_text">Enter text</string>
+    <string name="btn_send_text">Send text</string>
 </resources>

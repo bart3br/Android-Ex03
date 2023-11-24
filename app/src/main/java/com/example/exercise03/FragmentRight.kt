@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
-import androidx.navigation.fragment.NavHostFragment
-import org.w3c.dom.Text
 import java.util.Calendar
 
 
@@ -72,19 +69,6 @@ class FragmentRight : Fragment() {
         tvDate.setOnClickListener {
             dateDialog.show()
         }
-
-        view.findViewById<Button>(R.id.btn_edit_data).setOnClickListener{ _ ->
-            val navController = NavHostFragment.findNavController(this)
-            navController.navigate(R.id.action_fragmentRight_to_fragmentEdit)
-        }
-
-        /*childFragmentManager.setFragmentResultListener("datafromchild", viewLifecycleOwner) {
-                key, bundle ->
-            val result = bundle.getString("msg3")
-            (requireActivity().findViewById(R.id.tv_results) as TextView).text = result
-
-        }*/
-        view.findViewById<TextView>(R.id.tv_results).text = arguments?.getString("msg3")
     }
 
 }

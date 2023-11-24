@@ -10,6 +10,9 @@
         android:name="com.example.exercise03.FragmentLeft"
         android:label="fragment_left"
         tools:layout="@layout/fragment_left" >
+        <action
+            android:id="@+id/action_fragmentLeft_to_fragmentEdit"
+            app:destination="@id/fragmentEdit" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCenter"
@@ -22,9 +25,6 @@
         android:name="com.example.exercise03.FragmentRight"
         android:label="fragment_right"
         tools:layout="@layout/fragment_right">
-        <action
-            android:id="@+id/action_fragmentRight_to_fragmentEdit"
-            app:destination="@id/fragmentEdit" />
     </fragment>
 
     <action
@@ -50,7 +50,7 @@
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit">
         <action
-            android:id="@+id/action_fragmentEdit_to_fragmentRight"
-            app:destination="@id/fragmentRight" />
+            android:id="@+id/action_fragmentEdit_to_fragmentLeft"
+            app:destination="@id/fragmentLeft" />
     </fragment>
 </navigation>
